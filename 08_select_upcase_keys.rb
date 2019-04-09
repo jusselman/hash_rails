@@ -2,7 +2,15 @@
 # You can assume that the keys will always be strings.
 
 def select_upcase_keys(hash)
+  selected = {}
 
+  hash.each do |k, v|
+    if k == k.upcase
+      selected[k] = v
+    end
+  end
+
+  return selected
 end
 
 print select_upcase_keys({"make"=> "Tesla", "MODEL"=> "S", "Year"=> 2018, "SEATS"=> 4})
